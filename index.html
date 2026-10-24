@@ -3,21 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Labs Starter</title>
+  <title>Launchpad: IT jobs at startups</title>
 </head>
 <body>
-  <header class="u-header">
-    <nav class="u-nav">
-      <a href="#" class="u-logo">MySite</a>
-      <ul class="u-menu">
-        <li><a href="#/home">Home</a></li>
-        <li><a href="#/list">List</a></li>
-        <li><a href="#/about">About</a></li>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <%- include('partials/header') %>
+
+  <main id="main" class="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__eyebrow">Big ideas. Small teams. Real impact.</p>
+      <h1 class="hero__title" id="hero-title">Your next role. A bigger impact.</h1>
+      <p class="hero__text">Discover IT opportunities at ambitious startups. Join a team where your work helps build what comes next.</p>
+
+      <aside class="hero__stats" aria-label="Platform statistics">
+        <p class="hero__stats-title">A small team. A big next step.</p>
+        <dl class="hero__stats-list">
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Open roles</dt>
+            <dd class="hero__stat-value">640</dd>
+          </div>
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Startups</dt>
+            <dd class="hero__stat-value">128</dd>
+          </div>
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Remote-friendly</dt>
+            <dd class="hero__stat-value">70%</dd>
+          </div>
+        </dl>
+        <p class="hero__stats-note">Transparent salaries. Curated companies. No noise.</p>
+      </aside>
+
+      <form class="search" role="search" action="jobs.html" method="get">
+        <div class="search__field">
+          <input class="search__input" type="search" name="q" placeholder="Job title, skill or company" aria-label="Job title, skill or company">
+        </div>
+        <div class="search__field">
+          <input class="search__input" type="text" id="search-location" name="location" placeholder="Anywhere / Remote" aria-label="Location">
+        </div>
+        <button class="button button--primary search__submit" type="submit">Search jobs</button>
+      </form>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="featured__header">
+        <h2 class="featured__title" id="featured-title">Featured opportunities</h2>
+        <a class="featured__link" href="jobs.html">View all jobs</a>
+      </div>
+
+      <ul class="featured__list">
+        <% jobs.slice(0, 3).forEach(job => { %>
+        <li><%- include('partials/job-card', { job }) %></li>
+        <% }) %>
       </ul>
-    </nav>
-  </header>
-  <main id="app"></main>
-  <footer class="u-footer">© 2025</footer>
-  <script type="module" src="/src/js/main.js"></script>
+    </section>
+
+    <section class="focus" aria-labelledby="focus-title">
+      <h2 class="focus__title" id="focus-title">Find your focus</h2>
+        <ul class="focus__list">
+        <% focusAreas.forEach(area => { %>
+        <li><%- include('partials/focus-card', { area }) %></li>
+        <% }) %>
+      </ul>
+    </section>
+
+  </main>
+
+  <%- include('partials/footer') %>
 </body>
 </html>

@@ -1,0 +1,26 @@
+
+<article class="job-card">
+  <div class="job-card__top">
+    <span class="job-card__logo" aria-hidden="true"><%= job.company[0] %></span>
+
+    <div class="job-card__info">
+      <p class="job-card__meta"><%= job.company %> · <time datetime="<%= job.postedAt %>"><%= job.posted %></time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html"><%= job.title %></a></h3>
+      <p class="job-card__location"><%= job.location %></p>
+      <% if (locals.showDescription) { %>
+      <p class="job-card__description"><%= job.description %></p>
+      <% } %>
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save <%= job.title %> at <%= job.company %>"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      <% job.tags.forEach(tag => { %>
+      <li class="job-card__tag"><%= tag %></li>
+      <% }) %>
+    </ul>
+    <p class="job-card__salary"><%= job.salary %></p>
+  </div>
+</article>
