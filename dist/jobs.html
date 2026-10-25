@@ -1,0 +1,424 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find jobs | Launchpad</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="header">
+    <a class="header__logo" href="index.html">
+      <svg class="header__icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect width="24" height="24" rx="6" fill="currentColor" />
+        <path d="M8 16 16 8M10 8h6v6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="header__name">launchpad</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Main">
+      <ul class="header__list">
+        <li><a class="header__link" href="index.html">Home</a></li>
+        <li><a class="header__link" href="jobs.html" aria-current="page">Find jobs</a></li>
+        <li><a class="header__link" href="#">For startups</a></li>
+      </ul>
+
+      <ul class="header__actions">
+        <li><a class="header__link" href="#">Sign in</a></li>
+        <li><a class="button button--secondary" href="#">Post a job</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="jobs-intro" aria-labelledby="jobs-title">
+      <h1 class="jobs-intro__title" id="jobs-title">Find your next startup.</h1>
+      <p class="jobs-intro__text">Great teams are looking for people like you. Explore roles with transparent salaries.</p>
+      
+
+<form class="search" role="search" action="jobs.html" method="get">
+    <input class="search__input" type="search" name="q" placeholder="Job title, skill or company" aria-label="Job title, skill or company">
+    <input class="search__input" type="text" name="location" placeholder="Anywhere / Remote" aria-label="Location">
+    <button class="button button--primary search__submit" type="submit">Search jobs</button>
+</form>
+    </section>
+
+    <div class="jobs-layout">
+
+        <aside class="filters-panel" aria-label="Job filters">
+            <form class="filters" action="jobs.html" method="get">
+            <div class="filters__header">
+                <h2 class="filters__title">Filters</h2>
+                <button class="filters__reset" type="reset">Reset</button>
+            </div>
+
+            <fieldset class="filters__group">
+                <legend class="filters__legend">Work model</legend>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="remote"> Remote</label>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="hybrid"> Hybrid</label>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="on-site"> On-site</label>
+            </fieldset>
+
+            <fieldset class="filters__group">
+                <legend class="filters__legend">Employment</legend>
+                <label class="filters__option"><input type="checkbox" name="employment" value="full-time" checked> Full-time</label>
+                <label class="filters__option"><input type="checkbox" name="employment" value="contract"> Contract</label>
+            </fieldset>
+
+            <div class="filters__group">
+                <label class="filters__legend" for="experience">Experience</label>
+                <select class="filters__select" id="experience" name="experience">
+                <option value="">Any experience</option>
+                <option value="junior">Junior</option>
+                <option value="middle">Middle</option>
+                <option value="senior">Senior</option>
+                </select>
+            </div>
+
+            <div class="filters__group">
+                <label class="filters__legend" for="salary">Annual salary</label>
+                <select class="filters__select" id="salary" name="salary">
+                <option value="">Any salary</option>
+                <option value="40">From 40k</option>
+                <option value="70">From 70k</option>
+                <option value="100">From 100k</option>
+                </select>
+            </div>
+
+            <button class="button button--primary filters__submit" type="submit">Show 6 jobs</button>
+            </form>
+        </aside>
+
+        <section class="results" aria-labelledby="results-title">
+            <div class="results__header">
+                <h2 class="results__title" id="results-title">6 jobs for you</h2>
+                <form class="sort" action="jobs.html" method="get">
+                    <label class="sort__label" for="sort">Sort by</label>
+                    <select class="sort__select" id="sort" name="sort">
+                    <option value="recent" selected>Most recent</option>
+                    <option value="salary">Highest salary</option>
+                    </select>
+                </form>
+            </div>
+
+            <ul class="results__list">
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/orbit-1x.webp 1x, images/companies/orbit-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/orbit-1x.png"
+    srcset="images/companies/orbit-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Orbit logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Orbit · <time datetime="2026-10-24T11:00">2h ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">Senior Frontend Engineer</a></h3>
+      <p class="job-card__location">Remote · Europe</p>
+      
+      <p class="job-card__description">Build responsive, accessible interfaces with React and TypeScript. Join a 24-person distributed team.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save Senior Frontend Engineer at Orbit"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">React</li>
+      
+      <li class="job-card__tag">TypeScript</li>
+      
+    </ul>
+    <p class="job-card__salary">$90k – $120k</p>
+  </div>
+</article></li>
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/bytebase-1x.webp 1x, images/companies/bytebase-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/bytebase-1x.png"
+    srcset="images/companies/bytebase-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Bytebase logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Bytebase · <time datetime="2026-10-24T09:00">4h ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">Backend Engineer</a></h3>
+      <p class="job-card__location">Berlin · Hybrid</p>
+      
+      <p class="job-card__description">Design and scale APIs and data pipelines for a fast-growing product used by thousands of teams.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save Backend Engineer at Bytebase"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">Node.js</li>
+      
+      <li class="job-card__tag">PostgreSQL</li>
+      
+    </ul>
+    <p class="job-card__salary">€75k – €100k</p>
+  </div>
+</article></li>
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/stackly-1x.webp 1x, images/companies/stackly-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/stackly-1x.png"
+    srcset="images/companies/stackly-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Stackly logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Stackly · <time datetime="2026-10-24T07:00">6h ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">Product Designer</a></h3>
+      <p class="job-card__location">Remote · Worldwide</p>
+      
+      <p class="job-card__description">Shape the end-to-end experience of our design tools, from research to polished interfaces.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save Product Designer at Stackly"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">Figma</li>
+      
+      <li class="job-card__tag">SaaS</li>
+      
+    </ul>
+    <p class="job-card__salary">$70k – $95k</p>
+  </div>
+</article></li>
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/cloudnest-1x.webp 1x, images/companies/cloudnest-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/cloudnest-1x.png"
+    srcset="images/companies/cloudnest-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Cloudnest logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Cloudnest · <time datetime="2026-10-23T13:00">1d ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">DevOps Engineer</a></h3>
+      <p class="job-card__location">London · Hybrid</p>
+      
+      <p class="job-card__description">Automate deployments and keep our cloud infrastructure fast, secure and reliable as we scale.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save DevOps Engineer at Cloudnest"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">AWS</li>
+      
+      <li class="job-card__tag">Kubernetes</li>
+      
+    </ul>
+    <p class="job-card__salary">£80k – £110k</p>
+  </div>
+</article></li>
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/metric-1x.webp 1x, images/companies/metric-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/metric-1x.png"
+    srcset="images/companies/metric-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Metric logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Metric · <time datetime="2026-10-23T12:00">1d ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">Data Engineer</a></h3>
+      <p class="job-card__location">Amsterdam · On-site</p>
+      
+      <p class="job-card__description">Build and maintain data pipelines that turn raw product events into insights for every team.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save Data Engineer at Metric"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">Python</li>
+      
+      <li class="job-card__tag">SQL</li>
+      
+    </ul>
+    <p class="job-card__salary">€70k – €95k</p>
+  </div>
+</article></li>
+            
+            <li>
+<article class="job-card">
+  <div class="job-card__top">
+    
+<picture class="job-card__logo">
+  <source
+    type="image/webp"
+    srcset="images/companies/seedling-1x.webp 1x, images/companies/seedling-2x.webp 2x"
+  />
+  <img
+    class="job-card__logo-img"
+    src="images/companies/seedling-1x.png"
+    srcset="images/companies/seedling-2x.png 2x"
+    width="44"
+    height="44"
+    alt="Seedling logo"
+    loading="lazy"
+  />
+</picture>
+
+    <div class="job-card__info">
+      <p class="job-card__meta">Seedling · <time datetime="2026-10-22T13:00">2d ago</time></p>
+      <h3 class="job-card__title"><a class="job-card__link" href="job-details.html">Junior Full Stack Developer</a></h3>
+      <p class="job-card__location">Remote · Worldwide</p>
+      
+      <p class="job-card__description">Grow your skills shipping features across React and Node.js with mentorship from a senior team.</p>
+      
+    </div>
+
+    <button class="job-card__save" type="button" aria-label="Save Junior Full Stack Developer at Seedling"></button>
+  </div>
+
+  <div class="job-card__bottom">
+    <ul class="job-card__tags">
+      
+      <li class="job-card__tag">Full-time</li>
+      
+      <li class="job-card__tag">React</li>
+      
+      <li class="job-card__tag">Node.js</li>
+      
+    </ul>
+    <p class="job-card__salary">€40k – €55k</p>
+  </div>
+</article></li>
+            
+            </ul>
+
+            <nav class="pagination" aria-label="Pagination">
+            <ul class="pagination__list">
+                <li>
+                <a class="pagination__link" href="jobs.html?page=1" aria-label="Previous page">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg>
+                </a>
+                </li>
+                <li><a class="pagination__link" href="jobs.html?page=1" aria-label="Page 1" aria-current="page">1</a></li>
+                <li><a class="pagination__link" href="jobs.html?page=2" aria-label="Page 2">2</a></li>
+                <li><a class="pagination__link" href="jobs.html?page=3" aria-label="Page 3">3</a></li>
+                <li class="pagination__ellipsis" aria-hidden="true">…</li>
+                <li>
+                <a class="pagination__link" href="jobs.html?page=2" aria-label="Next page">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                </li>
+            </ul>
+            </nav>
+            <p class="pagination__summary">Showing 1–6 of 640 opportunities</p>
+        </section>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+  <p class="footer__copy">© 2026 Launchpad. Build what’s next.</p>
+  <nav class="footer__nav" aria-label="Footer">
+    <ul class="footer__list">
+      <li><a class="footer__link" href="#">About</a></li>
+      <li><a class="footer__link" href="#">Privacy</a></li>
+      <li><a class="footer__link" href="#">Terms</a></li>
+      <li><a class="footer__link" href="#">Contact</a></li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html>

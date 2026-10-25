@@ -4,13 +4,21 @@ import { jobs } from "./data/jobs.js";
 import { focusAreas } from "./data/focus.js";
 
 export default defineConfig({
-  plugins: [ViteEjsPlugin()],
+  base: "./",
   plugins: [ViteEjsPlugin({ jobs, focusAreas })],
   server: { port: 5173, open: true },
   preview: { port: 4173 },
   root: ".",
   build: {
     outDir: "dist",
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        index: "index.html",
+        jobs: "jobs.html",
+        "job-details": "job-details.html",
+        apply: "apply.html"
+      }
+    }
   }
 });
