@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for Senior Frontend Engineer at Orbit | Launchpad</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <%- include('partials/header', { page: 'jobs' }) %>
+
+  <main id="main" class="main">
+    <a class="back-link" href="job-details.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to job details
+    </a>
+
+    <section class="apply-intro" aria-labelledby="apply-title">
+      <h1 class="apply-intro__title" id="apply-title">Make your next move.</h1>
+      <p class="apply-intro__text">Apply to Senior Frontend Engineer at Orbit. Fields marked * are required.</p>
+    </section>
+
+    <div class="apply-layout">
+
+      <form class="apply-form" action="#" method="post" enctype="multipart/form-data">
+        <div class="apply-form__row">
+          <div class="apply-form__field">
+            <label class="apply-form__label" for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input class="apply-form__input" type="text" id="full-name" name="fullName" placeholder="Alex Morgan" autocomplete="name" required>
+          </div>
+          <div class="apply-form__field">
+            <label class="apply-form__label" for="email">Email address <span aria-hidden="true">*</span></label>
+            <input class="apply-form__input" type="email" id="email" name="email" placeholder="alex@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="apply-form__row">
+          <div class="apply-form__field">
+            <label class="apply-form__label" for="phone">Phone number</label>
+            <input class="apply-form__input" type="tel" id="phone" name="phone" placeholder="+44 7700 900000" autocomplete="tel">
+          </div>
+          <div class="apply-form__field">
+            <label class="apply-form__label" for="portfolio">Portfolio / LinkedIn</label>
+            <input class="apply-form__input" type="url" id="portfolio" name="portfolio" placeholder="https://your-portfolio.com" autocomplete="url">
+          </div>
+        </div>
+
+        <div class="apply-form__field">
+          <label class="apply-form__label" for="cover-letter">Cover letter</label>
+          <textarea class="apply-form__textarea" id="cover-letter" name="coverLetter" rows="5" placeholder="Tell Orbit why you’re excited about this role and what you’d bring to the team…" aria-describedby="cover-letter-hint"></textarea>
+          <p class="apply-form__hint" id="cover-letter-hint">Optional. Keep it personal and focused.</p>
+        </div>
+
+        <div class="apply-form__field">
+            <label class="apply-form__label" for="cv">CV / Resume <span aria-hidden="true">*</span></label>
+            <div class="apply-form__upload">
+                <svg class="apply-form__upload-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <div class="apply-form__upload-text">
+                    <p class="apply-form__upload-title">Drag and drop your CV here</p>
+                    <p class="apply-form__hint" id="cv-hint">PDF or DOCX · Maximum 5 MB</p>
+                </div>
+                <input class="apply-form__file" type="file" id="cv" name="cv" accept=".pdf,.docx" aria-describedby="cv-hint" required>
+            </div>
+        </div>
+
+        <div class="apply-form__consent">
+            <input class="apply-form__checkbox" type="checkbox" id="consent" name="consent" required>
+            <label class="apply-form__consent-label" for="consent">
+                I agree to share my application with Orbit and accept Launchpad’s <a class="apply-form__link" href="#">Privacy Policy</a>.
+            </label>
+        </div>
+
+        <div class="apply-form__actions">
+            <a class="button button--secondary" href="job-details.html">Cancel</a>
+            <button class="button button--primary" type="submit">Submit application</button>
+        </div>
+
+        <p class="apply-form__note">Your information is private and only shared with the hiring team.</p>
+      </form>
+
+      <aside class="apply-summary" aria-label="Job summary">
+        <div class="apply-summary__company">
+            <span class="apply-summary__logo" aria-hidden="true">O</span>
+            <p class="apply-summary__company-name">Orbit</p>
+        </div>
+
+        <h2 class="apply-summary__title">Senior Frontend Engineer</h2>
+        <p class="apply-summary__location">Remote · Europe</p>
+        <p class="apply-summary__salary">$90k – $120k / year</p>
+        <ul class="apply-summary__tags">
+            <li class="apply-summary__tag">Full-time</li>
+            <li class="apply-summary__tag">Senior</li>
+        </ul>
+
+        <div class="apply-summary__next">
+            <h2 class="apply-summary__next-title">What happens next?</h2>
+            <p class="apply-summary__text">The Orbit team reviews your application. If it’s a match, they’ll email you within 5 business days for an introductory call.</p>
+            <p class="apply-summary__text">No account needed. No recruitment fees.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
