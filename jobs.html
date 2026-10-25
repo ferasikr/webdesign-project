@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find jobs | Launchpad</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <%- include('partials/header', { page: 'jobs' }) %>
+
+  <main id="main" class="main">
+    <section class="jobs-intro" aria-labelledby="jobs-title">
+      <h1 class="jobs-intro__title" id="jobs-title">Find your next startup.</h1>
+      <p class="jobs-intro__text">Great teams are looking for people like you. Explore roles with transparent salaries.</p>
+      <%- include('partials/search-form') %>
+    </section>
+
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

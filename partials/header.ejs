@@ -9,8 +9,8 @@
 
     <nav class="header__nav" aria-label="Main">
       <ul class="header__list">
-        <li><a class="header__link" href="index.html" aria-current="page">Home</a></li>
-        <li><a class="header__link" href="jobs.html">Find jobs</a></li>
+        <li><a class="header__link" href="index.html"<% if (locals.page === 'home') { %> aria-current="page"<% } %>>Home</a></li>
+        <li><a class="header__link" href="jobs.html"<% if (locals.page === 'jobs') { %> aria-current="page"<% } %>>Find jobs</a></li>
         <li><a class="header__link" href="#">For startups</a></li>
       </ul>
 

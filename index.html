@@ -8,7 +8,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   
-  <%- include('partials/header') %>
+  <%- include('partials/header', { page: 'home' }) %>
 
   <main id="main" class="main">
     <section class="hero" aria-labelledby="hero-title">
@@ -35,15 +35,7 @@
         <p class="hero__stats-note">Transparent salaries. Curated companies. No noise.</p>
       </aside>
 
-      <form class="search" role="search" action="jobs.html" method="get">
-        <div class="search__field">
-          <input class="search__input" type="search" name="q" placeholder="Job title, skill or company" aria-label="Job title, skill or company">
-        </div>
-        <div class="search__field">
-          <input class="search__input" type="text" id="search-location" name="location" placeholder="Anywhere / Remote" aria-label="Location">
-        </div>
-        <button class="button button--primary search__submit" type="submit">Search jobs</button>
-      </form>
+      <%- include('partials/search-form') %>
     </section>
 
     <section class="featured" aria-labelledby="featured-title">
