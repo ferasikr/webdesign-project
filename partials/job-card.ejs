@@ -1,21 +1,7 @@
 
 <article class="job-card">
   <div class="job-card__top">
-    <picture class="job-card__logo">
-      <source
-        type="image/webp"
-        srcset="images/companies/<%= job.company.toLowerCase() %>-1x.webp 1x, images/companies/<%= job.company.toLowerCase() %>-2x.webp 2x"
-      />
-      <img
-        class="job-card__logo-img"
-        src="images/companies/<%= job.company.toLowerCase() %>-1x.png"
-        srcset="images/companies/<%= job.company.toLowerCase() %>-2x.png 2x"
-        width="44"
-        height="44"
-        alt="<%= job.company %> logo"
-        loading="lazy"
-      />
-    </picture>
+    <%- include('company-logo', { company: job.company, className: 'job-card__logo' }) %>
 
     <div class="job-card__info">
       <p class="job-card__meta"><%= job.company %> · <time datetime="<%= job.postedAt %>"><%= job.posted %></time></p>
