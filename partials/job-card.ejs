@@ -1,4 +1,3 @@
-
 <article class="job-card">
   <div class="job-card__top">
     <%- include('company-logo', { company: job.company, className: 'job-card__logo' }) %>
@@ -12,13 +11,13 @@
       <% } %>
     </div>
 
-    <button class="job-card__save" type="button" aria-label="Save <%= job.title %> at <%= job.company %>"></button>
+    <button class="job-card__save" type="button" aria-label="Save <%= job.title %> at <%= job.company %>" data-i18n-aria-label="jobCard.save" data-i18n-aria-label-title="<%= job.title %>" data-i18n-aria-label-company="<%= job.company %>"></button>
   </div>
 
   <div class="job-card__bottom">
     <ul class="job-card__tags">
       <% job.tags.forEach(tag => { %>
-      <li class="job-card__tag"><%= tag %></li>
+      <li class="job-card__tag"<% if (tag === 'Full-time') { %> data-i18n="tags.fullTime"<% } %>><%= tag %></li>
       <% }) %>
     </ul>
     <p class="job-card__salary"><%= job.salary %></p>

@@ -3,7 +3,7 @@
     <%- area.icon %>
   </svg>
   <div class="focus__text">
-    <span class="focus__name"><%= area.name %></span>
-    <span class="focus__count"><%= area.roles %></span>
+    <span class="focus__name" data-i18n="focus.<%= area.slug %>"><%= area.name %></span>
+    <span class="focus__count"><%= area.roles %> <span data-i18n="focus.roles">roles</span></span>
   </div>
 </a>
