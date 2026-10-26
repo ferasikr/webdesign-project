@@ -8,71 +8,71 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main" data-i18n="common.skipLink">Skip to main content</a>
 
   <%- include('partials/header', { page: 'jobs' }) %>
 
   <main id="main" class="main">
     <section class="jobs-intro" aria-labelledby="jobs-title">
-      <h1 class="jobs-intro__title" id="jobs-title">Find your next startup.</h1>
-      <p class="jobs-intro__text">Great teams are looking for people like you. Explore roles with transparent salaries.</p>
+      <h1 class="jobs-intro__title" id="jobs-title" data-i18n="jobs.title">Find your next startup.</h1>
+      <p class="jobs-intro__text" data-i18n="jobs.intro">Great teams are looking for people like you. Explore roles with transparent salaries.</p>
       <%- include('partials/search-form') %>
     </section>
 
     <div class="jobs-layout">
 
-        <aside class="filters-panel" aria-label="Job filters">
+        <aside class="filters-panel" aria-label="Job filters" data-i18n-aria-label="jobs.filtersLabel">
             <form class="filters" action="jobs.html" method="get">
             <div class="filters__header">
-                <h2 class="filters__title">Filters</h2>
-                <button class="filters__reset" type="reset">Reset</button>
+                <h2 class="filters__title" data-i18n="jobs.filters">Filters</h2>
+                <button class="filters__reset" type="reset" data-i18n="jobs.reset">Reset</button>
             </div>
 
             <fieldset class="filters__group">
-                <legend class="filters__legend">Work model</legend>
-                <label class="filters__option"><input type="checkbox" name="workModel" value="remote"> Remote</label>
-                <label class="filters__option"><input type="checkbox" name="workModel" value="hybrid"> Hybrid</label>
-                <label class="filters__option"><input type="checkbox" name="workModel" value="on-site"> On-site</label>
+                <legend class="filters__legend" data-i18n="jobs.workModel">Work model</legend>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="remote"> <span data-i18n="jobs.remote">Remote</span></label>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="hybrid"> <span data-i18n="jobs.hybrid">Hybrid</span></label>
+                <label class="filters__option"><input type="checkbox" name="workModel" value="on-site"> <span data-i18n="jobs.onSite">On-site</span></label>
             </fieldset>
 
             <fieldset class="filters__group">
-                <legend class="filters__legend">Employment</legend>
-                <label class="filters__option"><input type="checkbox" name="employment" value="full-time" checked> Full-time</label>
-                <label class="filters__option"><input type="checkbox" name="employment" value="contract"> Contract</label>
+                <legend class="filters__legend" data-i18n="jobs.employment">Employment</legend>
+                <label class="filters__option"><input type="checkbox" name="employment" value="full-time" checked> <span data-i18n="tags.fullTime">Full-time</span></label>
+                <label class="filters__option"><input type="checkbox" name="employment" value="contract"> <span data-i18n="jobs.contract">Contract</span></label>
             </fieldset>
 
             <div class="filters__group">
-                <label class="filters__legend" for="experience">Experience</label>
+                <label class="filters__legend" for="experience" data-i18n="jobs.experience">Experience</label>
                 <select class="filters__select" id="experience" name="experience">
-                <option value="">Any experience</option>
-                <option value="junior">Junior</option>
-                <option value="middle">Middle</option>
-                <option value="senior">Senior</option>
+                <option value="" data-i18n="jobs.anyExperience">Any experience</option>
+                <option value="junior" data-i18n="jobs.junior">Junior</option>
+                <option value="middle" data-i18n="jobs.middle">Middle</option>
+                <option value="senior" data-i18n="tags.senior">Senior</option>
                 </select>
             </div>
 
             <div class="filters__group">
-                <label class="filters__legend" for="salary">Annual salary</label>
+                <label class="filters__legend" for="salary" data-i18n="jobs.annualSalary">Annual salary</label>
                 <select class="filters__select" id="salary" name="salary">
-                <option value="">Any salary</option>
-                <option value="40">From 40k</option>
-                <option value="70">From 70k</option>
-                <option value="100">From 100k</option>
+                <option value="" data-i18n="jobs.anySalary">Any salary</option>
+                <option value="40" data-i18n="jobs.from40">From 40k</option>
+                <option value="70" data-i18n="jobs.from70">From 70k</option>
+                <option value="100" data-i18n="jobs.from100">From 100k</option>
                 </select>
             </div>
 
-            <button class="button button--primary filters__submit" type="submit">Show <%= jobs.length %> jobs</button>
+            <button class="button button--primary filters__submit" type="submit"><span data-i18n="jobs.show">Show</span> <%= jobs.length %> <span data-i18n="jobs.jobsWord">jobs</span></button>
             </form>
         </aside>
 
         <section class="results" aria-labelledby="results-title">
             <div class="results__header">
-                <h2 class="results__title" id="results-title"><%= jobs.length %> jobs for you</h2>
+                <h2 class="results__title" id="results-title"><%= jobs.length %> <span data-i18n="jobs.jobsForYou">jobs for you</span></h2>
                 <form class="sort" action="jobs.html" method="get">
-                    <label class="sort__label" for="sort">Sort by</label>
+                    <label class="sort__label" for="sort" data-i18n="jobs.sortBy">Sort by</label>
                     <select class="sort__select" id="sort" name="sort">
-                    <option value="recent" selected>Most recent</option>
-                    <option value="salary">Highest salary</option>
+                    <option value="recent" selected data-i18n="jobs.mostRecent">Most recent</option>
+                    <option value="salary" data-i18n="jobs.highestSalary">Highest salary</option>
                     </select>
                 </form>
             </div>
@@ -83,10 +83,10 @@
             <% }) %>
             </ul>
 
-            <nav class="pagination" aria-label="Pagination">
+            <nav class="pagination" aria-label="Pagination" data-i18n-aria-label="jobs.paginationLabel">
             <ul class="pagination__list">
                 <li>
-                <a class="pagination__link" href="jobs.html?page=1" aria-label="Previous page">
+                <a class="pagination__link" href="jobs.html?page=1" aria-label="Previous page" data-i18n-aria-label="jobs.prevPage">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg>
                 </a>
                 </li>
@@ -95,13 +95,13 @@
                 <li><a class="pagination__link" href="jobs.html?page=3" aria-label="Page 3">3</a></li>
                 <li class="pagination__ellipsis" aria-hidden="true">…</li>
                 <li>
-                <a class="pagination__link" href="jobs.html?page=2" aria-label="Next page">
+                <a class="pagination__link" href="jobs.html?page=2" aria-label="Next page" data-i18n-aria-label="jobs.nextPage">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
                 </a>
                 </li>
             </ul>
             </nav>
-            <p class="pagination__summary">Showing 1–<%= jobs.length %> of 640 opportunities</p>
+            <p class="pagination__summary"><span data-i18n="jobs.showing">Showing</span> 1–<%= jobs.length %> <span data-i18n="jobs.ofOpportunities">of 640 opportunities</span></p>
         </section>
 
     </div>
