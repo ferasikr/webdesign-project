@@ -7,16 +7,16 @@
       <span class="header__name">launchpad</span>
     </a>
 
-    <nav class="header__nav" aria-label="Main">
+    <nav class="header__nav" aria-label="Main" data-i18n-aria-label="header.navLabel">
       <ul class="header__list">
-        <li><a class="header__link" href="index.html"<% if (locals.page === 'home') { %> aria-current="page"<% } %>>Home</a></li>
-        <li><a class="header__link" href="jobs.html"<% if (locals.page === 'jobs') { %> aria-current="page"<% } %>>Find jobs</a></li>
-        <li><a class="header__link" href="#">For startups</a></li>
+        <li><a class="header__link" href="index.html" data-i18n="header.home"<% if (locals.page === 'home') { %> aria-current="page"<% } %>>Home</a></li>
+        <li><a class="header__link" href="jobs.html" data-i18n="header.findJobs"<% if (locals.page === 'jobs') { %> aria-current="page"<% } %>>Find jobs</a></li>
+        <li><a class="header__link" href="#" data-i18n="header.forStartups">For startups</a></li>
       </ul>
 
       <ul class="header__actions">
-        <li><a class="header__link" href="#">Sign in</a></li>
-        <li><a class="button button--secondary" href="#">Post a job</a></li>
+        <li><a class="header__link" href="#" data-i18n="header.signIn">Sign in</a></li>
+        <li><a class="button button--secondary" href="#" data-i18n="header.postJob">Post a job</a></li>
       </ul>
     </nav>
   </header>
